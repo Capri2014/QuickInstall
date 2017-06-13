@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-## GCC
+# GCC
 sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 sudo apt-get update
 sudo apt-get upgrade
@@ -37,7 +37,7 @@ echo "0cd6592ac2c5548d566fa9f874a386737e76029f5aabe1f04f8320173a05280d  bazel_0.
 sha256sum --check bazel_0.4.3-linux-x86_64.deb.sha256 && sudo dpkg -i bazel_0.4.3-linux-x86_64.deb
 
 ## Other common
-udo apt-get update
+sudo apt-get update
 sudo apt-get install --no-install-recommends \
           autoconf automake bison doxygen freeglut3-dev git graphviz \
             libboost-dev libboost-system-dev libgtk2.0-dev libhtml-form-perl \
@@ -48,4 +48,4 @@ sudo apt-get install --no-install-recommends \
 
 
 ## Set environment in .bashrc
-echo "export CC=gcc-4.9 CXX=g++-4.9 FC=gforan-4.9" >> ~/.bashrc
+echo "export CC=gcc-4.9 CXX=g++-4.9 FC=gfortran-4.9" >> ~/.bashrc
